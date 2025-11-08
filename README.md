@@ -40,13 +40,17 @@
 
 ### 1. 下载安装
 [官方网站](https://xmail.34567.xin)
-[百度网盘](https://pan.baidu.com/s/1ZoqT1Nq_5iUiqGk6xZdguQ?pwd=6666)
-[夸克网盘](https://pan.quark.cn/s/9e00bd8f0b56)
-[GitHub](https://github.com/MrWoods1692/Xmail/releases/download/v1.0.5/XMail_Pro_1.0.6_x64_zh-CN.msi)
+
+- [百度网盘](https://pan.baidu.com/s/1ZoqT1Nq_5iUiqGk6xZdguQ?pwd=6666)
+
+- [夸克网盘](https://pan.quark.cn/s/9e00bd8f0b56)
+
+- [GitHub](https://github.com/MrWoods1692/Xmail/releases/download/v1.0.5/XMail_Pro_1.0.6_x64_zh-CN.msi)
 
 下载 → 双击安装 → 完成即可使用，无需额外配置。
 
-2. 添加邮箱（以 QQ 为例）
+
+### 2. 添加邮箱（以 QQ 为例）
 - 启动 XMail Pro → 「添加账号」→ 选择服务商  
 - 输入邮箱地址  
 - 密码栏粘贴 “客户端授权码”（非邮箱登录密码）  
