@@ -1,0 +1,62 @@
+[package]
+name = "xmail-pro"
+version = "1.0.0"
+description = "XMail Pro - 专业邮件客户端"
+authors = ["XMail Team"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.3.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.6.2", features = [] }
+tauri-plugin-opener = "2.4.0"
+tauri-plugin-notification = "2.3.0"
+tauri-plugin-dialog = "2.3.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1.0", features = ["rt", "rt-multi-thread", "macros"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+anyhow = "1.0"
+dirs = "6.0"
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "mysql", "sqlite", "chrono", "uuid"] }
+dotenv = "0.15"
+thiserror = "2.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "chrono"] }
+regex = "1.0"
+async-imap = "0.10.4"
+native-tls = "0.2"
+async-native-tls = "0.5"
+async-std = { version = "1.12", features = ["attributes"] }
+futures = "0.3"
+mail-parser = "0.11"
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+url = "2.4"
+base64 = "0.22"
+rand = "0.9"
+warp = "0.3"
+opener = "0.8"
+lettre = { version = "0.11", default-features = false, features = ["smtp-transport", "builder", "rustls-tls"] }
+bcrypt = "0.15"
+urlencoding = "2.1"
+
+# 优化配置以减少运行时警告
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
